@@ -11,11 +11,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         fontFamily: "Open Sans, sans serif",
         spacing: { xs: 8, sm: 16, md: 24, lg: 32, xl: 40 },
         breakpoints: {
-          xs: 500,
-          sm: 800,
-          md: 1000,
-          lg: 1200,
-          xl: 1400,
+          xs: 360,
+          sm: 500,
+          md: 800,
+          lg: 1000,
+          xl: 1200,
+          xxl: 1400,
         },
         colors: {
           mercury: ["rgba(65, 158, 87, 0)"],
