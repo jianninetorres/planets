@@ -25,7 +25,7 @@ const useStyles = createStyles((theme, _params) => ({
     alignItems: "center",
     justifyContent: "space-between",
     borderBottom: `1px solid ${theme.colors.lightgrey}`,
-    paddingTop: theme.spacing.sm,
+    paddingTop: 0,
     paddingBottom: theme.spacing.sm,
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
@@ -37,6 +37,8 @@ const useStyles = createStyles((theme, _params) => ({
 
     [`@media (min-width: ${theme.breakpoints.lg}px)`]: {
       justifyContent: "flex-start",
+      paddingTop: 0,
+      paddingBottom: 0,
     },
   },
   navHeading: {
@@ -78,6 +80,7 @@ const useStyles = createStyles((theme, _params) => ({
     borderBottom: `1px solid ${theme.colors.lightgrey}`,
     fontFamily: "League Spartan",
     letterSpacing: "1.05px",
+    color: theme.colors.lightgrey,
 
     [`@media (min-width: ${theme.breakpoints.md}px)`]: {
       display: "flex",
@@ -86,11 +89,14 @@ const useStyles = createStyles((theme, _params) => ({
       borderBottom: 0,
       color: theme.colors.lightgrey,
     },
-
+  },
+  hoverColor: {
     [`@media (min-width: ${theme.breakpoints.lg}px)`]: {
-      paddingTop: 0,
-      paddingBottom: 0,
+      color: theme.colors.text,
     },
+  },
+  link: {
+    color: "inherit",
   },
   planetDisc: {
     display: "block",
