@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Nav from "../components/Nav";
-// import Image from 'next/image'
-// import styles from '../styles/Home.module.css'
+import Nav from "../components/nav/Nav";
 
 const Home: NextPage = () => {
   return (

@@ -101,7 +101,7 @@
   },
   {
     "name": "Jupiter",
-    "themeColour": "#D83A34",
+    "themeColour": "#ECAD7A",
     "overview": {
       "content": "Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass two and a half times that of all the other planets in the Solar System combined, but less than one-thousandth the mass of the Sun.",
       "source": "https://en.wikipedia.org/wiki/Jupiter"
@@ -126,7 +126,7 @@
   },
   {
     "name": "Saturn",
-    "themeColour": "#CD5120",
+    "themeColour": "#FCCB6B",
     "overview": {
       "content": "Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth. It only has one-eighth the average density of Earth.",
       "source": "https://en.wikipedia.org/wiki/Saturn"
