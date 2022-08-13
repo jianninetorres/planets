@@ -68,11 +68,13 @@ const useStyles = createStyles((theme, _params) => ({
     listStyle: "none",
     paddingTop: theme.spacing.md,
     paddingBottom: theme.spacing.md,
+    borderBottom: `1px solid ${theme.colors.border}`,
 
     [`@media (min-width: ${theme.breakpoints.md}px)`]: {
       display: "flex",
       width: "100%",
       justifyContent: "space-evenly",
+      borderBottom: 0,
     },
   },
   planetDisc: {
