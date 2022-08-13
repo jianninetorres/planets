@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import data from "../../data/data.json";
+import FutureImage from "next/future/image";
 import useStyles from "./styles";
 import menuIcon from "../../public/menu-icon.svg";
 import chevronIcon from "../../public/chevron-right.svg";
@@ -22,7 +23,13 @@ const Nav = () => {
         }}
       ></span>
       {planet.name}
-      <Image src={chevronIcon} alt="" width={20} height={20} />
+      <FutureImage
+        src={chevronIcon}
+        alt=""
+        width={20}
+        height={20}
+        className={classes.chevronRight}
+      />
     </li>
   ));
 
@@ -34,7 +41,7 @@ const Nav = () => {
     <nav className={classes.wrapper}>
       <div className={classes.navTitle}>
         The Planets{" "}
-        <Image
+        <FutureImage
           src={menuIcon}
           alt="menu"
           width={24}
