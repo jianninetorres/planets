@@ -9,6 +9,15 @@ const useStyles = createStyles((theme, _params) => ({
   },
   wrapper: {
     backgroundColor: theme.colors.background,
+
+    [`@media (min-width: ${theme.breakpoints.md}px)`]: {
+      borderBottom: `1px solid ${theme.colors.border}`,
+    },
+
+    [`@media (min-width: ${theme.breakpoints.lg}px)`]: {
+      display: "grid",
+      gridTemplateColumns: "0.5fr 1fr",
+    },
   },
   navTitle: {
     display: "flex",
@@ -23,6 +32,10 @@ const useStyles = createStyles((theme, _params) => ({
     [`@media (min-width: ${theme.breakpoints.md}px)`]: {
       borderBottom: 0,
       justifyContent: "center",
+    },
+
+    [`@media (min-width: ${theme.breakpoints.lg}px)`]: {
+      justifyContent: "flex-start",
     },
   },
   menuIcon: {
@@ -55,7 +68,6 @@ const useStyles = createStyles((theme, _params) => ({
     listStyle: "none",
     paddingTop: theme.spacing.md,
     paddingBottom: theme.spacing.md,
-    borderBottom: `1px solid ${theme.colors.border}`,
 
     [`@media (min-width: ${theme.breakpoints.md}px)`]: {
       display: "flex",
