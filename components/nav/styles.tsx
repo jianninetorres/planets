@@ -1,6 +1,12 @@
 import { createStyles } from "@mantine/core";
 
 const useStyles = createStyles((theme, _params) => ({
+  isVisible: {
+    display: "block",
+  },
+  isNotVisible: {
+    display: "none",
+  },
   wrapper: {
     backgroundColor: theme.colors.background,
   },
