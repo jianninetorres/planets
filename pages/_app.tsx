@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           text: ["rgba(255, 255, 255, 0)"],
           background: ["rgba(7, 7, 36, 0)"],
           hover: ["rgba(56, 56, 79, 0)"],
-          border: ["rgba(255, 255, 255, 0.2)"],
+          lightgrey: ["rgba(255, 255, 255, 0.2)"],
         },
       }}
     >

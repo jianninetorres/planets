@@ -11,19 +11,20 @@ const useStyles = createStyles((theme, _params) => ({
     backgroundColor: theme.colors.background,
 
     [`@media (min-width: ${theme.breakpoints.md}px)`]: {
-      borderBottom: `1px solid ${theme.colors.border}`,
+      borderBottom: `1px solid ${theme.colors.lightgrey}`,
     },
 
     [`@media (min-width: ${theme.breakpoints.lg}px)`]: {
       display: "grid",
       gridTemplateColumns: "0.5fr 1fr",
+      alignItems: "center",
     },
   },
   navTitle: {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    borderBottom: `1px solid ${theme.colors.border}`,
+    borderBottom: `1px solid ${theme.colors.lightgrey}`,
     paddingTop: theme.spacing.sm,
     paddingBottom: theme.spacing.sm,
     paddingLeft: theme.spacing.md,
@@ -37,6 +38,10 @@ const useStyles = createStyles((theme, _params) => ({
     [`@media (min-width: ${theme.breakpoints.lg}px)`]: {
       justifyContent: "flex-start",
     },
+  },
+  navHeading: {
+    fontSize: "28px", // custom
+    lineHeight: "36.23px",
   },
   menuIcon: {
     display: "block",
@@ -59,6 +64,8 @@ const useStyles = createStyles((theme, _params) => ({
 
     [`@media (min-width: ${theme.breakpoints.md}px)`]: {
       display: "flex",
+      paddingTop: 0,
+      paddingBottom: 0,
     },
   },
   planets: {
@@ -68,13 +75,21 @@ const useStyles = createStyles((theme, _params) => ({
     listStyle: "none",
     paddingTop: theme.spacing.md,
     paddingBottom: theme.spacing.md,
-    borderBottom: `1px solid ${theme.colors.border}`,
+    borderBottom: `1px solid ${theme.colors.lightgrey}`,
+    fontFamily: "League Spartan",
+    letterSpacing: "1.05px",
 
     [`@media (min-width: ${theme.breakpoints.md}px)`]: {
       display: "flex",
       width: "100%",
       justifyContent: "space-evenly",
       borderBottom: 0,
+      color: theme.colors.lightgrey,
+    },
+
+    [`@media (min-width: ${theme.breakpoints.lg}px)`]: {
+      paddingTop: 0,
+      paddingBottom: 0,
     },
   },
   planetDisc: {

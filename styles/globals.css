@@ -6,6 +6,31 @@ body {
     BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
     Droid Sans, Helvetica Neue, sans-serif;
   background: #070724;
+  letter-spacing: normal;
+}
+
+h1 {
+  font-family: "Antonio";
+  font-size: 5em;
+  line-height: 103px;
+}
+
+h2 {
+  font-family: "Antonio";
+  font-size: 2.5em;
+  line-height: 52px;
+}
+
+h3 {
+  font-family: "League Spartan";
+  font-size: 1em;
+  line-height: 25px;
+}
+
+h4 {
+  font-family: "League Spartan";
+  font-size: 0.813em;
+  line-height: 25px;
 }
 
 a {

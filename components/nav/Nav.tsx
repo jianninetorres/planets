@@ -35,7 +35,7 @@ const Nav = () => {
         }}
         className={classes.planetDisc}
       ></span>
-      {planet.name}
+      {planet.name.toUpperCase()}
       <FutureImage
         src={chevronIcon}
         alt=""
@@ -53,7 +53,7 @@ const Nav = () => {
   return (
     <nav className={classes.wrapper}>
       <div className={classes.navTitle}>
-        The Planets{" "}
+        <h2 className={classes.navHeading}>THE PLANETS</h2>
         <FutureImage
           src={menuIcon}
           alt="menu"
