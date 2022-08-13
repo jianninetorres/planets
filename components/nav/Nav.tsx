@@ -57,8 +57,8 @@ const Nav = () => {
         <FutureImage
           src={menuIcon}
           alt="menu"
-          width={24}
-          height={24}
+          width={36}
+          height={28}
           onClick={toggleNav}
           className={classes.menuIcon}
         />
