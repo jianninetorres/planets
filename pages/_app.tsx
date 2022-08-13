@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { MantineProvider } from "@mantine/core";
+import Nav from "../components/nav/Nav";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -32,6 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         },
       }}
     >
+      <Nav />
       <Component {...pageProps} />
     </MantineProvider>
   );
