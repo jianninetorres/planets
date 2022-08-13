@@ -14,13 +14,9 @@ const Nav = () => {
     <li key={planet.name} className={classes.planets}>
       <span
         style={{
-          display: "block",
-          marginRight: "25px",
           backgroundColor: planet.themeColour,
-          borderRadius: 100,
-          width: "20px",
-          height: "20px",
         }}
+        className={classes.planetDisc}
       ></span>
       {planet.name}
       <FutureImage
@@ -47,6 +43,7 @@ const Nav = () => {
           width={24}
           height={24}
           onClick={toggleNav}
+          className={classes.menuIcon}
         />
       </div>
       <div className={isVisible ? classes.isVisible : classes.isNotVisible}>

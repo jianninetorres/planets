@@ -19,6 +19,22 @@ const useStyles = createStyles((theme, _params) => ({
     paddingBottom: theme.spacing.sm,
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
+
+    [`@media (min-width: ${theme.breakpoints.md}px)`]: {
+      borderBottom: 0,
+      justifyContent: "center",
+    },
+  },
+  menuIcon: {
+    display: "block",
+    [`@media (min-width: ${theme.breakpoints.md}px)`]: {
+      display: "none",
+    },
+  },
+  chevronRight: {
+    [`@media (min-width: ${theme.breakpoints.md}px)`]: {
+      display: "none",
+    },
   },
   planetsContainer: {
     marginTop: 0,
@@ -27,6 +43,10 @@ const useStyles = createStyles((theme, _params) => ({
     paddingBottom: theme.spacing.lg,
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
+
+    [`@media (min-width: ${theme.breakpoints.md}px)`]: {
+      display: "flex",
+    },
   },
   planets: {
     display: "grid",
@@ -36,11 +56,23 @@ const useStyles = createStyles((theme, _params) => ({
     paddingTop: theme.spacing.md,
     paddingBottom: theme.spacing.md,
     borderBottom: `1px solid ${theme.colors.border}`,
+
+    [`@media (min-width: ${theme.breakpoints.md}px)`]: {
+      display: "flex",
+      width: "100%",
+      justifyContent: "space-evenly",
+    },
   },
   planetDisc: {
     display: "block",
+    borderRadius: 100,
     width: "20px",
     height: "20px",
+    marginRight: theme.spacing.md,
+
+    [`@media (min-width: ${theme.breakpoints.md}px)`]: {
+      display: "none",
+    },
   },
 }));
 
