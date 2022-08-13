@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import FutureImage from "next/future/image";
+import Link from "next/link";
 
 import useStyles from "./styles";
 import menuIcon from "../../public/menu-icon.svg";
@@ -35,7 +36,7 @@ const Nav = () => {
         }}
         className={classes.planetDisc}
       ></span>
-      {planet.name.toUpperCase()}
+      <Link href={planet.path}>{planet.name.toUpperCase()}</Link>
       <FutureImage
         src={chevronIcon}
         alt=""
