@@ -13,11 +13,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         breakpoints: {
           xs: 360,
           sm: 500,
-          md: 600,
-          lg: 1024,
-          xl: 1200,
-          xxl: 1400,
-          xxxl: 1600,
+          md: 768,
+          lg: 1200,
+          xl: 1400,
+          xxl: 1600,
         },
         colors: {
           mercury: ["rgba(65, 158, 87, 0)"],
