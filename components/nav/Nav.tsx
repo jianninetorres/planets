@@ -3,6 +3,7 @@ import Image from "next/image";
 import data from "../../data/data.json";
 import useStyles from "./styles";
 import menuIcon from "../../public/menu-icon.svg";
+import chevronIcon from "../../public/chevron-right.svg";
 
 const Nav = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,6 +22,7 @@ const Nav = () => {
         }}
       ></span>
       {planet.name}
+      <Image src={chevronIcon} alt="" width={20} height={20} />
     </li>
   ));
 

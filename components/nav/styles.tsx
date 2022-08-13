@@ -29,7 +29,9 @@ const useStyles = createStyles((theme, _params) => ({
     paddingRight: theme.spacing.md,
   },
   planets: {
-    display: "flex",
+    display: "grid",
+    gridTemplateColumns: "24px 1fr 20px",
+    gridGap: "25px",
     listStyle: "none",
     paddingTop: theme.spacing.md,
     paddingBottom: theme.spacing.md,
