@@ -1,7 +1,7 @@
 import { MouseEvent, useEffect, useState } from "react";
 import FutureImage from "next/future/image";
 import Link from "next/link";
-import PlanetType from "./helpers";
+import { PlanetType } from "./helpers";
 
 import useStyles from "./styles";
 import menuIcon from "../../public/menu-icon.svg";
