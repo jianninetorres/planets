@@ -6,6 +6,7 @@ import useStyles from "./styles";
 
 import PlanetImage from "../components/planetImage/PlanetImage";
 import PlanetDescription from "../components/planetDescription/PlanetDescription";
+import PlanetFactsContainer from "../components/planetFacts/PlanetFactsContainer";
 
 const Planet: NextPage = () => {
   const { classes } = useStyles();
@@ -44,6 +45,14 @@ const Planet: NextPage = () => {
         title={content.name}
         content={content.overview.content}
         source={content.overview.source}
+      />
+      <PlanetFactsContainer
+        data={{
+          rotationTime: content.rotation,
+          revolutionTime: content.revolution,
+          radius: content.radius,
+          avgTemp: content.temperature,
+        }}
       />
     </div>
   );
