@@ -23,23 +23,33 @@ h2 {
 
 h3 {
   font-family: "League Spartan";
-  font-size: 1em;
+  font-size: 1.5em;
   line-height: 25px;
 }
 
 h4 {
   font-family: "League Spartan";
-  font-size: 0.813em;
+  font-size: 1.2;
   line-height: 25px;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 22px;
 }
 
 a:hover {
   cursor: pointer;
+}
+
+p {
+  font-family: "League Spartan";
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 22px;
 }
 
 * {

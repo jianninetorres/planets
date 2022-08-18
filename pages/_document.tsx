@@ -5,7 +5,7 @@ const MyDocument = () => {
     <Html>
       <Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@300;700&display=swap"
           rel="stylesheet"
         />
       </Head>
