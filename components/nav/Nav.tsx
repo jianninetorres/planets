@@ -1,6 +1,7 @@
 import { MouseEvent, useEffect, useState } from "react";
 import FutureImage from "next/future/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { PlanetType } from "./helpers";
 
 import useStyles from "./styles";
@@ -10,6 +11,7 @@ import data from "../../data/data.json";
 
 const Nav = () => {
   const { classes } = useStyles();
+  const router = useRouter();
   const hasWindow = typeof window !== "undefined";
   const [isVisible, setIsVisible] = useState(false);
   const [isWide, setIsWide] = useState(false);
@@ -20,6 +22,11 @@ const Nav = () => {
   useEffect(() => {
     setIsWide(window.innerWidth > 767);
   }, []);
+
+  // close nav after navigating to a different page
+  useEffect(() => {
+    setIsVisible(false);
+  }, [router.query]);
 
   useEffect(() => {
     window.addEventListener("resize", () => {
