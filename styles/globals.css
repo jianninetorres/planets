@@ -45,11 +45,19 @@ a:hover {
   cursor: pointer;
 }
 
+a.external {
+  text-decoration: underline;
+}
+
 p {
   font-family: "League Spartan";
   font-weight: 300;
   font-size: 1em;
   line-height: 22px;
+}
+
+p.citation {
+  color: rgba(255, 255, 255, 0.2);
 }
 
 * {

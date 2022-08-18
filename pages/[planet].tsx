@@ -43,6 +43,7 @@ const Planet: NextPage = () => {
       <PlanetDescription
         title={content.name}
         content={content.overview.content}
+        source={content.overview.source}
       />
     </div>
   );
