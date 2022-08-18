@@ -1,3 +1,11 @@
+import { createStyles } from "@mantine/core";
+
+const useStyles = createStyles((theme, _params) => ({
+  container: {
+    textAlign: "center",
+  },
+}));
+
 interface PlanetDescriptionProps {
   title: string;
   content: string;
@@ -5,8 +13,9 @@ interface PlanetDescriptionProps {
 }
 
 const PlanetDescription = (props: PlanetDescriptionProps) => {
+  const { classes } = useStyles();
   return (
-    <div>
+    <div className={classes.container}>
       <h2>{props.title.toUpperCase()}</h2>
       <p>{props.content}</p>
       <p className="citation">
