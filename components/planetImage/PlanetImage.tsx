@@ -1,4 +1,5 @@
 import Image from "next/image";
+import useStyles from "./styles";
 
 interface PlanetImageProps {
   name: string;
@@ -6,15 +7,16 @@ interface PlanetImageProps {
 }
 
 const PlanetImage = (props: PlanetImageProps) => {
+  const { classes } = useStyles();
+
   return (
-    <div>
+    <div className={classes.container}>
       <Image
         src={props.src}
         alt={`Animated image of ${props.name}`}
-        width={200}
-        height={200}
-        layout="fill"
-        objectFit="scale-down"
+        width={300}
+        height={300}
+        layout="intrinsic"
       />
     </div>
   );
