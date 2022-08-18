@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import useStyles from "./styles";
 
 import PlanetImage from "../components/planetImage/PlanetImage";
+import PlanetDescription from "../components/planetDescription/PlanetDescription";
 
 const Planet: NextPage = () => {
   const { classes } = useStyles();
@@ -38,6 +39,10 @@ const Planet: NextPage = () => {
       <PlanetImage
         name={content.name}
         src={`/planets-images/external/${content.name}-external.svg`}
+      />
+      <PlanetDescription
+        title={content.name}
+        content={content.overview.content}
       />
     </div>
   );
