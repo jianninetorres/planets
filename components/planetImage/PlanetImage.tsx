@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-interface PlanetImage {
+interface PlanetImageProps {
   name: string;
   src: string;
 }
 
-const PlanetImage = (props: PlanetImage) => {
+const PlanetImage = (props: PlanetImageProps) => {
   return (
     <div>
       <Image
