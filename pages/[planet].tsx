@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import data from "../data/data.json";
 import { useRouter } from "next/router";
-import useStyles from "./styles";
+import useStyles from "../components/page/styles";
 
 import PlanetImage from "../components/planetImage/PlanetImage";
 import PlanetDescription from "../components/planetDescription/PlanetDescription";
