@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           saturn: ["rgba(205, 81, 32, 0)"],
           uranus: ["rgba(30, 193, 162, 0)"],
           neptune: ["rgba(45, 104, 240, 0)"],
-          text: ["rgba(255, 255, 255, 0)"],
+          text: ["rgba(255, 255, 255, 1)"],
           background: ["rgba(7, 7, 36, 0)"],
           hover: ["rgba(56, 56, 79, 0)"],
           lightgrey: ["rgba(255, 255, 255, 0.2)"],

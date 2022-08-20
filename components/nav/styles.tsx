@@ -1,6 +1,6 @@
 import { createStyles } from "@mantine/core";
 
-const useStyles = createStyles((theme, _params) => ({
+const useStyles = createStyles((theme, hoverBorderTopColor?: string) => ({
   isVisible: {
     display: "block",
   },
@@ -93,6 +93,16 @@ const useStyles = createStyles((theme, _params) => ({
   hoverColor: {
     [`@media (min-width: ${theme.breakpoints.lg}px)`]: {
       color: theme.colors.text,
+    },
+  },
+  hoverBorderTop: {
+    [`@media (min-width: ${theme.breakpoints.lg}px)`]: {
+      borderTop: "4px solid",
+    },
+  },
+  hoverBorderTopColor: {
+    [`@media (min-width: ${theme.breakpoints.lg}px)`]: {
+      borderTopColor: hoverBorderTopColor,
     },
   },
   link: {
