@@ -39,7 +39,7 @@ const Planet: NextPage = () => {
       </Head>
       <PlanetImage
         name={content.name}
-        src={`/planets-images/external/${content.name}-external.svg`}
+        src={`/planets-images/external/${content.name.toLowerCase()}-external.svg`}
       />
       <PlanetDescription
         title={content.name}
