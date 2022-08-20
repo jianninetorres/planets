@@ -1,31 +1,43 @@
-import { MouseEventHandler, useState } from "react";
+import { useReducer, useState } from "react";
 import chevronIcon from "../../public/chevron-right.svg";
 import FutureImage from "next/future/image";
 import Link from "next/link";
 import useStyles from "./styles";
 import { PlanetType } from "./helpers";
+import {
+  ACTION_TYPES,
+  INITIAL_STATE,
+  planetListItemReducer,
+} from "./planetListItemReducer";
 
 interface PlanetListItemProps {
   data: PlanetType[];
 }
 
 const PlanetListItem = (props: PlanetListItemProps): JSX.Element => {
-  const [hover, setHover] = useState(false);
-  const [onHoveredPlanet, setOnHoveredPlanet] = useState("");
-  const [hoverColor, setHoverColor] = useState("");
-  const { classes } = useStyles(hoverColor);
+  const [state, dispatch] = useReducer(planetListItemReducer, INITIAL_STATE);
+  const { classes } = useStyles(state.hoverColor);
 
   const onHover = (e: HTMLLIElement, planet: PlanetType) => {
     if (e.id === planet.name) {
-      setHover(true);
-      setOnHoveredPlanet(planet.name);
-      setHoverColor(planet.themeColour);
+      dispatch({
+        type: ACTION_TYPES.HOVER,
+        payload: {
+          onHoveredPlanet: planet.name,
+          hoverColor: planet.themeColour,
+        },
+      });
     }
   };
 
   const offHover = () => {
-    setHover(false);
-    setOnHoveredPlanet("");
+    dispatch({
+      type: ACTION_TYPES.NOT_HOVER,
+      payload: {
+        onHoveredPlanet: "",
+        hoverColor: "",
+      },
+    });
   };
 
   const List = props.data.map((planet) => {
@@ -34,11 +46,15 @@ const PlanetListItem = (props: PlanetListItemProps): JSX.Element => {
         key={planet.name}
         id={planet.name}
         className={`${classes.planets} ${
-          hover && planet.name === onHoveredPlanet ? classes.hoverColor : ""
+          state.hover && planet.name === state.onHoveredPlanet
+            ? classes.hoverColor
+            : ""
         } ${
-          hover && planet.name === onHoveredPlanet ? classes.hoverBorderTop : ""
+          state.hover && planet.name === state.onHoveredPlanet
+            ? classes.hoverBorderTop
+            : ""
         } ${
-          hover && planet.name === onHoveredPlanet
+          state.hover && planet.name === state.onHoveredPlanet
             ? classes.hoverBorderTopColor
             : ""
         }`}
